@@ -1,0 +1,502 @@
+
+
+/* --- product item style --- */
+
+body.dark .newReviewForm .fromReview, 
+body.dark .shareSection .shareContainer {
+    background: #000;
+}
+
+body.dark .postCommands .review {
+    color: #fff;
+}
+
+body.dark main.main .product .productDetails,
+body.dark main.main .productContents {
+    background: transparent;
+}
+
+body.dark .product .productDetails{
+    color: #fff;
+}
+
+body.dark span {
+    color: #fff;
+}
+
+main.main .product {
+    position: fixed;
+    width: 300px;
+    bottom: 0;
+    top: 70px;
+    left: 85px;
+    margin: 10px 0 15px;
+}
+
+main.main .product .productDetails {
+    position: relative;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: #f0eded;
+    box-shadow: 0 0 4px #999;
+}
+
+main.main .product .productDetails .imgContainer {
+    width: 200px;
+    height: 200px;
+    background: var(--bgColor);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+main.main .product .productDetails .imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main.main .product .productDetails h3,
+.newReviewForm .fromReview .fromReview h3,
+.shareSection .shareContainer h3{
+    padding: 5px 10px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+main.main .product .productDetails .ratings {
+    gap: 4px;
+    margin-top: 10px;
+}
+
+main.main .product .productDetails .totalReview {
+    padding-top: 15px;
+    font-size: 15px;
+}
+
+main.main .product .productDetails .ratings span,
+main.main .product .productDetails .moreCotent .likeDislike .like::before,
+main.main .product .productDetails .moreCotent .likeDislike .dislike::before,
+main.main .product .productDetails .moreCotent .views::before,
+main.main .productReveiws .postCommands .itemComments .starRatings span{
+    mask-image: var(--fullstar);
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    background: var(--bgColor);
+}
+
+main.main .product .productDetails .moreCotent .likeDislike .like,
+main.main .product .productDetails .moreCotent .likeDislike .dislike{
+    cursor: pointer;
+}
+
+main.main .product .productDetails .ratings span {
+    background: #a7a7a7;
+}
+
+main.main .product .productDetails .ratings span.fullstar,
+main.main .product .productDetails .ratings span.halfstar {
+    background: var(--bgColor);
+}
+
+main.main .product .productDetails .ratings span.halfstar{
+    mask-image: var(--halfstar);
+}
+
+main.main .product .productDetails .ratings::after{
+    content: attr(data-rate);
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+main.main .product .productDetails .moreCotent {
+    margin: 15px 0;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+main.main .product .productDetails .moreCotent .likeDislike,
+main.main .product .productDetails .moreCotent .views {
+    gap: 10px;
+    font-size: 20px;
+    width: 100%;
+    justify-content: center;
+    user-select: none;
+}
+
+main.main .product .productDetails .moreCotent .likeDislike .like::before,
+main.main .product .productDetails .moreCotent .likeDislike .dislike::before {
+    content: '';
+    mask-image: var(--like);
+    margin-right: 5px;
+}
+
+main.main .product .productDetails .moreCotent .likeDislike .like.active::before,
+main.main .product .productDetails .moreCotent .likeDislike .dislike.active::before {
+    mask-image: var(--like-o);
+}
+
+main.main .product .productDetails .moreCotent .likeDislike .dislike::before {
+    transform: rotate(180deg);
+}
+
+main.main .product .productDetails .moreCotent .likeDislike .like.active::before{
+    animation: like .8s ease;
+}
+
+main.main .product .productDetails .moreCotent .likeDislike .dislike.active::before {
+    animation: dislike .8s ease;
+}
+
+@keyframes like {
+    50% {
+        transform: rotate(-15deg) scale(1.2);
+    }
+    0%, 100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes dislike {
+    50% {
+        transform: rotate(165deg) scale(1.2);
+    }
+    0%, 100% {
+        transform: rotate(180deg) scale(1);
+    }
+}
+
+.main.main .product .productDetails .moreCotent .views::before {
+    content: '';
+    mask-image: var(--eye);
+}
+
+main.main .product .productDetails button {
+    margin-top: 10px;
+    background: var(--bgColor);
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+/* --- style to review system --- */
+
+main.main .productContents {
+    margin-left: 305px;
+    padding: 10px;
+    position: relative;
+    background: #f0eded;
+    box-shadow: 0 0 4px #999;
+}
+
+main.main .productContents .productDetails {
+    padding: 5px;
+}
+
+.productDetails p.type {
+    font-size: 17px;
+    line-height: 20x;
+    margin-bottom: 5px;
+}
+
+main.main .productDetails h4,
+main.main .pubDetailsPub h4,
+main.main .productReveiws h3 {
+    font-size: 21px;
+    margin: 1px 0 5px;
+}
+
+main.main .productDetails p.describe {
+    text-align: justify;
+    line-height: 20px;
+}
+
+main.main .pubDetailsPub {
+    margin: 10px 0;
+}
+
+main.main .pubDetailsPub span {
+    display: block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+main.main .pubDetailsPub span::before {
+    content: attr(data-name) ": ";
+    font-weight: bold;
+}
+
+main.main .productContents .productReveiws {
+    padding: 5px;
+}
+
+main.main .productContents .productReveiws .itemComments{
+    position: relative;
+    margin-top: 15px;
+}
+
+main.main .productContents .productReveiws .itemComments .Itemreview {
+    height: 50px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    font-size: 17px;
+}
+
+main.main .productContents .productReveiws .itemComments .Itemreview img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: fill;
+    /* background: green; */
+}
+
+main.main .productReveiws .postCommands .itemComments .starRatings {
+    gap: 3px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-top: -8px;
+}
+
+main.main .productReveiws .postCommands .itemComments .starRatings span {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: #a19797;
+}
+
+main.main .productReveiws .postCommands .itemComments .starRatings span.active {
+    background-color: var(--bgColor);
+}
+
+main.main .productReveiws .postCommands .itemComments .review {
+    line-height: 20px;
+    font-size: 17px;
+    text-align: justify;
+}
+
+main.main .productReveiws .postCommands .itemComments .commentBtn {
+    text-align: right;
+}
+
+main.main .productReveiws .postCommands .itemComments .commentBtn .del {
+    background: var(--bgColor);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    mask-image: var(--trash);
+    width: 25px;
+    height: 25px;
+}
+
+main.main .productReveiws .postCommands .itemComments .commentBtn .del:hover {
+    background: red;
+}
+
+
+/* --- mobile review button */
+
+main.main .productContents .mobileReviewBtn {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    display: none;
+}
+
+main.main .productContents .mobileReviewBtn.active {
+    display: block;
+}
+
+main.main .productContents .mobileReviewBtn button.mobReviewBtn {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: var(--bgColor);
+    position: relative;
+    padding: 10px 15px;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+/* --- creating message section --- */
+
+.newReviewForm .fromReview .formSection {
+    max-width: 600px;
+    width: 600px;
+}
+
+.newReviewForm .fromReview .formSection .userProfile {
+    margin: 20px 0 15px;
+}
+
+.newReviewForm .fromReview .formSection .userProfile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bgColor);
+}
+
+.newReviewForm .fromReview .formSection .userProfile span {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.newReviewForm .fromReview .formSection .starReview span {
+    width: 25px;
+    height: 25px;
+    margin-left: 4px;
+    cursor: pointer;
+    background: #8b878794;
+    mask-image: var(--fullstar);
+    mask-position: center;
+    mask-size: cover;
+    transform: rotateY(0deg);
+    transition: background .3s ease, transform 1s ease;
+}
+
+.newReviewForm .fromReview .formSection input.ratesBox,
+.newReviewForm input.productLink{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    pointer-events: none;
+}
+
+.newReviewForm .fromReview .formSection .feildSection {
+    margin: 20px 0 10px;
+    position: relative;
+    display: flex;
+}
+
+.newReviewForm .fromReview .formSection .feildSection textarea {
+    border: 1px solid #555;
+    border-radius: 5px;
+    resize: vertical;
+    max-height: 200px;
+    width: 100%;
+    background: transparent;
+    height: 100px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.newReviewForm .fromReview .formSection .formBtn {
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.newReviewForm .fromReview .formSection .formBtn button,
+.newReviewForm .fromReview .formSection .formBtn a {
+    width: 200px;
+    height: 40px;
+    background: var(--bgColor);
+    font-size: 18px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.newReviewForm .fromReview .formSection .formBtn a{
+    text-align: center;
+    line-height: 40px;
+}
+
+/* --- footer style code --- */
+
+footer.footer {
+    margin-left: 395px;
+    margin-right: 10px;
+    margin-top: -5px;
+}
+
+footer.footer .footHead {
+    flex-direction: column;
+}
+
+footer.footer .footHead .footLinks {
+    margin: 20px 0 5px;
+}
+
+
+@media screen and (max-width: 760px) {
+    main.main .product {
+        width: 290px;
+    }
+    main.main .product .productDetails .imgContainer {
+        width: 190px;
+        height: 190px;
+    }
+    main.main .productContents {
+        margin-left: 295px;
+    }
+    footer.footer {
+        margin-left: 385px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main.main .product {
+        left: 10px;
+    }
+    main.main .product .productDetails button.share {
+        margin-bottom: 60px;
+    }
+    footer.footer {
+        margin-left: 305px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    main.main .productContents {
+        margin-left: 0;
+    }
+
+    main.main .product {
+        position: relative;
+        width: 100%;
+        bottom: unset;
+        height: calc(100vh - 85px);
+        top: 0;
+        left: 0;
+        margin: 0 0 20px;
+    }
+    main.main .product .productDetails button.share {
+        margin-bottom: 55px;
+    }
+
+    main.main .productContents .mobileReviewBtn button.mobReviewBtn {
+        display: flex;
+    }
+    footer.footer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .newReviewForm .fromReview {
+        width: 80%;
+    }
+
+    .newReviewForm .fromReview .formSection {
+        width: 100%;
+    }
+    .newReviewForm .fromReview .formSection .formBtn button {
+        width: 100%;
+    }
+    main.main .pubDetailsPub span {
+        font-size: 16px;
+    }
+}
+    

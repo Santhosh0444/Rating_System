@@ -1,0 +1,1595 @@
+
+body.dark {
+    background: #2d2d2d;
+}
+
+
+/* --- dark section code --- */
+
+body.dark h4,
+body.dark h3,
+body.dark p,
+body.dark a,
+body.dark input,
+body.dark textarea{
+    color: var(--dark-fontColor) !important;
+}
+
+body.dark header.topBar {
+    box-shadow: 0 0 3px #fff;
+    background: #000;
+}
+
+body.dark header.topBar .middle .srchSecton {
+    box-shadow: 0 0 3px #fff;
+}
+
+
+body.dark main.main span {
+    color: #fff;
+}
+
+body.dark header.topBar .middle .srchSecton button.searchBtn,
+body.dark header.topBar .right .uploadBtn a span {
+    background-color: var(--dark-fontColor);
+}
+
+body.dark nav.navBar .menuNav .menuList,
+body.dark nav.navBar .mobileMenu .mobileMenuItems {
+    background: #000;
+}
+
+body.dark nav.navBar .menuNav .menuList div>a::before,
+body.dark header.topBar .left button.navBtn span,
+body.dark header.topBar .left button.navBtn::before,
+body.dark header.topBar .left button.navBtn::after,
+body.dark nav.navBar .mobileMenu .mobileLogo button.navBtn span,
+body.dark nav.navBar .mobileMenu .mobileLogo button.navBtn::before,
+body.dark nav.navBar .mobileMenu .mobileLogo button.navBtn::after,
+body.dark nav.navBar .mobileMenu .mobileMenuItems ul.mobileItems li a::before,
+body.dark main.main .formContainers .feildBox.fileUpload span.icon {
+    background-color: #fff;
+}
+
+/* -- universal style code start ---- */
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+button,
+a {
+    cursor: pointer;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.flexBox {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #fff;
+}
+
+/* ---- universal style code end --- */
+
+header.topBar {
+    height: 70px;
+    box-shadow: 0 0 3px #333;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 2;
+}
+
+
+/* ---- topbar left style ----- */
+
+header.topBar .left .logo,
+nav.navBar .mobileMenu .mobileLogo .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+header.topBar .left button.navBtn,
+nav.navBar .mobileMenu .mobileLogo button.navBtn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    overflow: hidden;
+    transition: background .2s ease;
+    border-radius: 50%;
+}
+
+header.topBar .left button.navBtn:hover,
+nav.navBar .mobileMenu .mobileLogo button.navBtn:hover {
+    background: var(--hover);
+}
+
+header.topBar .left button.navBtn span,
+header.topBar .left button.navBtn::before,
+header.topBar .left button.navBtn::after,
+nav.navBar .mobileMenu .mobileLogo button.navBtn span,
+nav.navBar .mobileMenu .mobileLogo button.navBtn::before,
+nav.navBar .mobileMenu .mobileLogo button.navBtn::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 25px;
+    height: 2px;
+    background: #000;
+    pointer-events: none;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    transition: transform .3s ease .3s, left .2s ease .3s, background .3s ease;
+}
+
+header.topBar .left button.navBtn:hover span,
+header.topBar .left button.navBtn:hover::before,
+header.topBar .left button.navBtn:hover::after,
+nav.navBar .mobileMenu .mobileLogo button.navBtn:hover span,
+nav.navBar .mobileMenu .mobileLogo button.navBtn:hover::before,
+nav.navBar .mobileMenu .mobileLogo button.navBtn:hover::after {
+    background: var(--bgColor) !important;
+}
+
+
+header.topBar .left button.navBtn::before,
+nav.navBar .mobileMenu .mobileLogo button.navBtn::before {
+    content: '';
+    transform: translate(-50%, calc(-50% - 8px));
+}
+
+header.topBar .left button.navBtn::after,
+nav.navBar .mobileMenu .mobileLogo button.navBtn::after {
+    content: '';
+    transform: translate(-50%, calc(-50% + 8px));
+}
+
+header.topBar .left button.navBtn.show span,
+nav.navBar .mobileMenu .mobileLogo button.navBtn.show span {
+    left: -100%;
+}
+
+header.topBar .left button.navBtn.show::before,
+nav.navBar .mobileMenu .mobileLogo button.navBtn.show::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+header.topBar .left button.navBtn.show::after,
+nav.navBar .mobileMenu .mobileLogo button.navBtn.show::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+/* ----- topbar middle style ------ */
+
+header.topBar .middle .srchSecton {
+    box-shadow: 0 0 2px #000;
+    padding: 0 7px 0 10px;
+    border-radius: 20px;
+    position: relative;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	transition: box-shadow .5s ease;
+}
+
+header.topBar .middle .srchSecton:hover{
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+header.topBar .middle .srchSecton .inputSection {
+    position: relative;
+    height: 100%;
+    min-height: 40px;
+}
+
+
+header.topBar .middle .srchSecton input[type='search'] {
+    width: 450px;
+    font-size: 18px;
+    font-weight: 100;
+    color: #333;
+}
+
+header.topBar .middle .srchSecton button.searchBtn {
+    background: #333;
+    width: 25px;
+    height: 25px;
+    mask-image: var(--search);
+    transition: background .3s ease;
+}
+
+header.topBar .middle .srchSecton button.searchBtn:hover {
+    background: var(--bgColor);
+}
+
+header.topBar .middle .srchSecton button.searchBtn:active {
+    transform: scale(.9);
+}
+
+/* ------  topbar right section ------ */
+
+header.topBar .right .uploadBtn a,
+header.topBar .right .userProfile .userImg a {
+    width: 40px;
+    height: 40px;
+    background: #00000009;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: background .2s ease;
+}
+
+header.topBar .right .uploadBtn a:hover,
+header.topBar .right .userProfile .userImg a:hover {
+    background: var(--hover) !important;
+}
+
+header.topBar .right .uploadBtn a span {
+    mask-image: var(--fileUpload);
+    background: #333;
+    width: 30px;
+    height: 30px;
+    transition: background .4s ease;
+}
+
+header.topBar .right .uploadBtn a:hover span {
+    background: var(--bgColor) !important;
+}
+
+header.topBar .right .userProfile .profileNav {
+    position: absolute;
+    min-width: 100px;
+    background: var(--bgColor);
+    border-radius: 5px;
+    padding: 5px;
+    right: 0;
+    top: 0;
+    transform: translate(-5px, 68px) scaleY(0);
+    transform-origin: top;
+    transition: transform .3s ease .4s;
+}
+
+header.topBar .right .userProfile .profileNav.show {
+    transform: translate(-5px, 68px) scaleY(1);
+    transition-delay: 0s;
+}
+
+header.topBar .right .userProfile .profileNav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    transform: translateY(50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: var(--bgColor);
+    right: 30px;
+    transition: transform .2s ease;
+}
+
+header.topBar .right .userProfile .profileNav.show::before {
+    transform: translateY(-50%) rotate(45deg);
+    transition-delay: .3s;
+}
+
+header.topBar .right .userProfile .profileNav span {
+    font-size: 16px;
+    padding: 8px 7px 10px;
+    display: block;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #d8d5d5;
+}
+
+header.topBar .right .userProfile .profileNav ul li a {
+    display: block;
+    padding: 6px 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1px;
+    transition: background .2s ease;
+    border-radius: 5px;
+}
+
+header.topBar .right .userProfile .profileNav ul li a:hover {
+    background: var(--hover);
+}
+
+/* ---- navbar Style section ------ */
+
+
+nav.navBar {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    left: 0;
+}
+
+/* --- mobile menu style --- */
+
+nav.navBar .mobileMenu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform .3s ease;
+    z-index: 2;
+}
+
+nav.navBar .mobileMenu.show {
+    transform: translateX(0);
+}
+
+nav.navBar .mobileMenu .mobileMenuItems {
+    background: #fff;
+    height: 100vh;
+    width: 200px;
+}
+
+nav.navBar .mobileMenu .mobileMenuItems .mobileLogo {
+    height: 70px;
+    padding: 0 20px;
+    box-shadow: 0 0 4px #333;
+}
+
+nav.navBar .mobileMenu.show~.bgCover,
+header.topBar.srchMob .middle .srchBgCover {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: #00000046;
+    bottom: 0;
+    z-index: 1;
+    cursor: pointer;
+    width: 100vw;
+    backdrop-filter: blur(3px);
+}
+
+header.topBar.srchMob .middle .srchBgCover {
+    display: none;
+}
+
+nav.navBar .mobileMenu .mobileMenuItems ul.mobileItems {
+    height: 100%;
+    padding: 5px 10px;
+}
+
+nav.navBar .mobileMenu .mobileMenuItems ul.mobileItems li a {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    margin-top: 2px;
+    border-radius: 10px;
+    gap: 8px;
+    padding-left: 20px;
+    transition: background .3s ease, color .2s ease;
+}
+
+nav.navBar .mobileMenu .mobileMenuItems ul.mobileItems li a.active,
+nav.navBar .mobileMenu .mobileMenuItems ul.mobileItems li a:hover {
+    background: var(--bgColor);
+    color: #fff;
+}
+
+nav.navBar .mobileMenu .mobileMenuItems ul.mobileItems li a.active::before,
+nav.navBar .mobileMenu .mobileMenuItems ul.mobileItems li a:hover::before {
+    background: #fff;
+}
+
+nav.navBar .mobileMenu .mobileMenuItems ul.mobileItems li a::before {
+    content: '';
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    width: 30px;
+    height: 30px;
+    background: #000;
+    transition: background .2s ease;
+}
+
+nav.navBar .mobileMenu .mobileMenuItems ul.mobileItems li a.home::before {
+    mask-image: var(--home)
+}
+
+nav.navBar .mobileMenu .mobileMenuItems ul.mobileItems li a.contact::before {
+    mask-image: var(--contact);
+    width: 26px;
+    height: 26px;
+}
+
+nav.navBar .mobileMenu .mobileMenuItems ul.mobileItems li a.about::before {
+    mask-image: var(--about)
+}
+
+nav.navBar .mobileMenu .mobileMenuItems ul.mobileItems li a.privacy::before {
+    mask-image: var(--privacy)
+}
+
+nav.navBar .mobileMenu .mobileMenuItems ul.mobileItems li a.disclaimer::before {
+    mask-image: var(--discliamer);
+    width: 26px;
+    height: 26px;
+}
+
+nav.navBar .mobileMenu .mobileMenuItems ul.mobileItems li a:after {
+    content: attr(data-name);
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+/* --- nav extra menu --- */
+
+
+nav.navBar .menuNav {
+    width: 80px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+nav.navBar .menuNav .menuList {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 40px;
+    padding: 15px 0;
+    width: 55px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    box-shadow: 0 0 5px #666;
+}
+
+nav.navBar .menuNav .menuList a {
+    display: flex;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: color .3s ease;
+}
+
+nav.navBar .menuNav .menuList a:hover::before {
+    background: var(--bgColor)  !important;
+}
+
+nav.navBar .menuNav .menuList a:hover{
+    color: var(--bgColor) !important;
+}
+
+nav.navBar .menuNav .menuList a.upload {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: var(--bgColor);
+    color: #fff !important;
+}
+
+nav.navBar .menuNav .menuList>div {
+    position: relative;
+}
+
+nav.navBar .menuNav .menuList div>a::before {
+    content: '';
+    width: 26px;
+    height: 26px;
+    background: #222;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    transition: background .2s ease;
+}
+
+nav.navBar .menuNav .menuList a.home {
+    color: var(--bgColor);
+}
+
+nav.navBar .menuNav .menuList a.user::before {
+    display: none;
+}
+
+
+nav.navBar .menuNav .menuList div>a::after {
+    content: attr(data-name);
+    font-size: 9px;
+}
+
+nav.navBar .menuNav .menuList a.home::before {
+    mask-image: var(--home);
+    background: var(--bgColor);
+}
+
+nav.navBar .menuNav .menuList a.home.active::before {
+    mask-image: var(--home-o);
+}
+
+nav.navBar .menuNav .menuList a.settings::before {
+    mask-image: var(--settings);
+    transition: background .2s ease, transform .25s linear;
+}
+
+nav.navBar .menuNav .menuList a.settings:hover::before{
+    transform: rotate(120deg);
+}
+
+nav.navBar .menuNav .menuList a.settings.active::before {
+    mask-image: var(--settings-o);
+    background: var(--bgColor);
+}
+
+nav.navBar .menuNav .menuList a.settings.active {
+    color: var(--bgColor);
+}
+
+nav.navBar .menuNav .menuList a.upload::before {
+    mask-image: var(--fileUpload);
+    width: 30px;
+    height: 30px;
+    background: #fff !important;
+}
+
+nav.navBar .menuNav .menuList a.share::before {
+    mask-image: var(--share);
+}
+
+nav.navBar .menuNav .menuList a.user img {
+    border-radius: 50%;
+    width: 26px;
+    object-fit: contain;
+    height: 26px;
+    /* background: #222; */
+    transition: border .2s linear;
+    border: 2px solid transparent;
+}
+
+nav.navBar .menuNav .menuList a.user:hover img {
+    border: 2px solid var(--bgColor);
+}
+
+nav.navBar .menuNav .menuList .settingItem {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    background: var(--bgColor);
+    transform: translate(20px, -50%) scaleX(0);
+    transform-origin: left;
+    padding: 5px;
+    border-radius: 5px;
+    transition: transform .2s ease;
+}
+
+nav.navBar .menuNav .menuList .settingItem.show {
+    transform: translate(20px, -50%) scaleX(1);
+}
+
+nav.navBar .menuNav .menuList .settingItem label {
+    display: flex;
+    height: 35px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+nav.navBar .menuNav .menuList .settingItem label:hover {
+    background: #00000041;
+}
+
+nav.navBar .menuNav .menuList .settingItem label input[type='checkbox'] {
+    margin-left: 15px;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 32px;
+    box-shadow: inset 1px 1px 3px #222;
+    background: linear-gradient(to top, #222, #666);
+    height: 20px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+nav.navBar .menuNav .menuList .settingItem label:hover input[type='checkbox']::before {
+    transform: scale(.6);
+}
+
+nav.navBar .menuNav .menuList .settingItem label input[type='checkbox']::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    background: #fff;
+    border-radius: 50%;
+    transform: scale(.7);
+    transition: transform .2s ease, left .2s ease;
+}
+
+nav.navBar .menuNav .menuList .settingItem label input[type='checkbox']:checked::before {
+    left: 40%;
+}
+
+nav.navBar .menuNav .menuList div .profileNav {
+    position: absolute;
+    left: 100%;
+    background: var(--bgColor);
+    top: 50%;
+    transform: translate(20px, -50%) scaleX(0);
+    min-width: 120px;
+    transform-origin: left;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform .2s ease;
+}
+
+nav.navBar .menuNav .menuList div .profileNav.show {
+    transform: translate(20px, -50%) scaleX(1);
+}
+
+nav.navBar .menuNav .menuList div .profileNav::before,
+nav.navBar .menuNav .menuList .settingItem::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    transform: translate(50%, -50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: var(--bgColor);
+    top: 50%;
+    transition: transform .3s ease .3s;
+    z-index: -1;
+}
+
+nav.navBar .menuNav .menuList div .profileNav.show::before,
+nav.navBar .menuNav .menuList .settingItem.show::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+nav.navBar .menuNav .menuList div .profileNav span {
+    font-size: 15px;
+    padding: 5px 3px 10px;
+    color: #fff;
+    display: block;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 3px;
+}
+
+nav.navBar .menuNav .menuList div .profileNav ul li a {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 1px;
+    transition: background .3s ease;
+}
+
+nav.navBar .menuNav .menuList div .profileNav ul li a:hover {
+    background: #0000004d;
+}
+
+/* ---- main section style code ----- */
+
+main.main {
+    margin-left: 80px;
+    position: relative;
+    padding: 10px;
+}
+
+/* ---- container style ---- */
+
+main.main .container {
+    position: relative;
+    padding: 5px;
+}
+
+/* ---- features post style ---- */
+
+main.main .container .featuredPost,
+main.main .allPosts {
+    position: relative;
+    padding-top: 10px;
+}
+
+main.main .container .featuredPost>h4,
+main.main .allPosts>h3 {
+    padding-left: 10px;
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
+main.main .container .featuredPost .featuredItems,
+main.main .allPosts .postItems {
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+}
+
+
+main.main .container .featuredPost .featuredItems .featuredItem,
+main.main .allPosts .postItems .postItem {
+    width: 300px;
+    height: 150px;
+    position: relative;
+    flex-basis: 300px;
+    flex-grow: 1;
+    margin-left: 30px;
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem .itemContent,
+main.main .allPosts .postItems .postItem .itemContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background: transparent;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset, 0 0 2px #999;
+	transition: box-shadow .5s ease;
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem .itemContent:hover,
+main.main .allPosts .postItems .postItem .itemContent:hover {
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset, 0 0 1px #999;
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem .itemContent .imgContent,
+main.main .allPosts .postItems .postItem .itemContent .imgContent {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    /* background: linear-gradient(45deg, rgb(123, 123, 255), rgba(5, 5, 241, 0.89)); */
+    background: var(--bgColor);
+    left: 0;
+    top: 50%;
+    transform: translate(-25%, -50%);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem .itemContent .imgContent img,
+main.main .allPosts .postItems .postItem .itemContent .imgContent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem .textContent h4,
+main.main .allPosts .postItems .postItem .textContent h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem .textContent,
+main.main .allPosts .postItems .postItem .textContent {
+    padding: 5px 10px;
+    padding-left: 85px;
+    width: 100%;
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem .textContent a p,
+main.main .allPosts .postItems .postItem .textContent a p {
+    font-size: 15px;
+    padding-bottom: 10px;
+    text-align: justify;
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem a.ratings,
+main.main .allPosts .postItems .postItem a.ratings {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem a.ratings span,
+main.main .container .featuredPost .featuredItems .featuredItem .more .view::before,
+main.main .allPosts .postItems .postItem a.ratings span,
+main.main .allPosts .postItems .postItem .more .view::before,
+main.main .container .advancedPost .advacedPostContent a.advacedRates span {
+    mask-image: var(--fullstar);
+    width: 16px;
+    height: 16px;
+    background: var(--bgColor);
+    mask-position: center;
+    mask-size: cover;
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem a.ratings span,
+main.main .container .advancedPost .advacedPostContent a.advacedRates span,
+main.main .allPosts .postItems .postItem a.ratings span {
+    background: #b2b2bb;
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem a.ratings span.full,
+main.main .container .advancedPost .advacedPostContent a.advacedRates span.full,
+main.main .allPosts .postItems .postItem a.ratings span.full {
+    background: var(--bgColor);
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem a.ratings span.half,
+main.main .container .advancedPost .advacedPostContent a.advacedRates span.half,
+main.main .allPosts .postItems .postItem a.ratings span.half {
+    mask-image: var(--halfstar);
+    background: var(--bgColor);
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem a.ratings::after,
+main.main .allPosts .postItems .postItem a.ratings::after {
+    content: attr(rate);
+    font-size: 15px;
+    padding-left: 4px;
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem .more,
+main.main .allPosts .postItems .postItem .more {
+    display: flex;
+    justify-content: space-between;
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem .more .view,
+main.main .allPosts .postItems .postItem .more .view {
+    font-size: 15px;
+    gap: 3px;
+}
+
+main.main .container .featuredPost .featuredItems .featuredItem .more .view::before,
+main.main .allPosts .postItems .postItem .more .view::before {
+    content: '';
+    display: block;
+    mask-image: var(--eye);
+    width: 23px;
+    height: 23px;
+}
+
+
+/* ---- advanced post ---- */
+
+main.main .advancedPost {
+	
+    /*background: linear-gradient(to bottom, #c2806d, #305a7a);*/
+	background: #305a7a;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+
+main.main .advancedPost .moreAdvancePost {
+    padding: 5px;
+    width: 220px;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.advacePosts {
+    display: flex;
+    gap: 28px 8px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 10px;
+}
+
+main.main .advancedPost .moreAdvancePost h3 {
+    padding-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+main.main .advancedPost .moreAdvancePost p {
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 22px;
+}
+
+main.main .advancedPost .advacePosts .advancedPostsItems {
+    width: 200px;
+    height: 150px;
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+
+main.main .advancedPost .advacedItems {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 5px;
+    /*background: red;*/
+	background: transparent;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	transition: box-shadow .5s ease;
+}
+
+main.main .advancedPost .advacedItems:hover {
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+main.main .advancedPost .advancedPostsItems .imgContent {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    border-radius: 3px;
+    padding: 3px;
+	box-shadow: inset -4px -6px 5px 1px #00000061;
+}
+
+main.main .advancedPost .advancedPostsItems .imgContent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main.main .advancedPost .advacedPostContent {
+    padding: 5px 10px;
+    padding-top: 75px;
+    text-align: left;
+}
+
+main.main .advancedPost .advacedPostContent h3 {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+main.main .advancedPost .advacedPostContent a{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: #fff;
+}
+
+main.main .advancedPost a.advacedRates {
+    align-items: center;
+    gap: 3px;
+    margin-top: 7px;
+}
+
+main.main .advancedPost a.advacedRates::after {
+    content: attr(rate);
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+/* -- post style ---- */
+
+.postItems {
+    padding: 10px;
+}
+
+main.main .allPosts .postItems .postItem {
+    flex-basis: 280px;
+}
+
+/* --- creating message section --- */
+
+.newReviewForm,
+.newReviewForm .formBg,
+.shareSection,
+.shareSection .shareBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.newReviewForm,
+.shareSection {
+    display: none;
+}
+
+.newReviewForm.show,
+.shareSection.show {
+    display: block;
+	z-index: 2;
+}
+
+.newReviewForm .formBg,
+.shareSection .shareBg {
+    position: absolute;
+    left: 0;
+    background: #00000048;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+}
+
+.newReviewForm .fromReview,
+.shareSection .shareContainer {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* --- share content style --- */
+
+.shareSection .shareOptions {
+    gap: 5px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.shareSection .shareOptions a,
+.shareSection .shareOptions button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    flex-basis: 50px;
+    flex-grow: 1;
+    height: 45px;
+    background: var(--bg);
+    border-radius: 5px;
+}
+
+.shareSection .shareOptions a::before,
+.shareSection .shareOptions button::before {
+    content: '';
+    mask-size: cover;
+    width: 25px;
+    height: 25px;
+    display: block;
+    background: #fff;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-image: var(--icon);
+}
+
+.shareSection .shareContainer .canBtn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.shareSection .shareContainer .canBtn button {
+    background: var(--bgColor);
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+
+
+/* --- footer section style code --- */
+
+footer.footer {
+    background: #393939;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+footer.footer .footHead {
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+}
+
+footer.footer .footHead .social,
+footer.footer .footHead .footLinks {
+    gap: 3px;
+}
+
+footer.footer .footHead .social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background: var(--bg);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer.footer .footHead .social a::before {
+    content: '';
+    mask-image: var(--icon);
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    display: block;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+footer.footer .footHead .footLinks a {
+    color: #fff;
+    width: 65px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+footer.footer .footHead .footLinks a:hover {
+    font-weight: 600;
+    color: var(--bgColor);
+}
+
+footer.footer .footBottom {
+    background: #000;
+    text-align: center;
+    padding: 15px 0 8px;
+}
+
+footer.footer .footBottom span {
+    color: #fff;
+    font-size: 17px;
+}
+
+/* -- screen code -- */
+
+@media screen and (max-width: 800px) {
+
+    header.topBar .middle .srchSecton input[type='search'] {
+        width: 300px;
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem,
+    main.main .allPosts .postItems .postItem {
+        height: 140px;
+        flex-basis: 250px;
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem .itemContent .imgContent,
+    main.main .allPosts .postItems .postItem .itemContent .imgContent {
+        width: 80px;
+        height: 80px;
+        transform: translate(-35%, -50%);
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem .textContent,
+    main.main .allPosts .postItems .postItem .textContent {
+        padding: 5px 8px;
+        padding-left: 63px;
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem .textContent h4,
+    main.main .allPosts .postItems .postItem .textContent h4 {
+        font-size: 17px;
+    }
+
+    main.main .container .featuredPost .featuredItems,
+    main.main .allPosts .postItems {
+        gap: 28px 22px;
+        position: relative;
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem .textContent a p,
+    main.main .allPosts .postItems .postItem .textContent a p {
+        font-size: 14px;
+        padding-bottom: 8px;
+        text-align: justify;
+    }
+
+    .featuredItems .featuredItem a.ratings span,
+    main.main .container .featuredPost .featuredItems .featuredItem .more .view::before,
+    main.main .allPosts .postItems .postItem a.ratings span,
+    main.main .allPosts .postItems .postItem .more .view::before {
+        width: 13px;
+        height: 13px;
+    }
+
+    main.main .advancedPost .advacePosts .advancedPostsItems:nth-child(3),
+    main.main .advancedPost .advacePosts .advancedPostsItems:nth-child(4) {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+
+    header.topBar,
+    nav.navBar .mobileMenu .mobileMenuItems .mobileLogo {
+        padding: 0 10px;
+
+    }
+
+    header.topBar .middle .srchSecton input[type='search'] {
+        width: 200px;
+    }
+
+    nav.navBar .menuNav {
+        height: 85px;
+        position: fixed;
+        top: unset;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+
+    nav.navBar .menuNav .menuList {
+        flex-direction: row;
+        padding: 0 15px;
+        height: 55px;
+        gap: 4px;
+        width: unset;
+    }
+
+    nav.navBar .menuNav .menuList .settingItem,
+    nav.navBar .menuNav .menuList div .profileNav {
+        left: 50%;
+        top: -100%;
+        transform: translate(-50%, 0) scaleY(0);
+        transform-origin: top;
+        transition: transform .2s ease;
+    }
+
+    nav.navBar .menuNav .menuList .settingItem.show {
+        transform: translate(-50%, -20px) scaleY(1);
+    }
+
+    nav.navBar .menuNav .menuList div .profileNav.show {
+        transform: translate(-50%, -80px) scaleY(1);
+    }
+
+    main.main {
+        margin-left: 0;
+    }
+
+    nav.navBar .menuNav .menuList div .profileNav::before,
+    nav.navBar .menuNav .menuList .settingItem::before {
+        left: 50%;
+        transform: translate(-50%, -100%) rotate(45deg);
+        top: 100%;
+    }
+
+    nav.navBar .menuNav .menuList div .profileNav.show::before,
+    nav.navBar .menuNav .menuList .settingItem.show::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem:nth-child(5),
+    main.main .container .featuredPost .featuredItems .featuredItem:nth-child(6) {
+        display: none;
+    }
+
+    footer.footer {
+        margin-bottom: 90px;
+    }
+}
+
+@media screen and (max-width: 615px) {
+
+    main.main .container .featuredPost .featuredItems .featuredItem,
+    main.main .allPosts .postItems .postItem {
+        height: 150px;
+        flex-basis: 300px;
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem .itemContent .imgContent,
+    main.main .allPosts .postItems .postItem .itemContent .imgContent {
+        width: 100px;
+        height: 100px;
+        transform: translate(-25%, -50%);
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem .textContent,
+    main.main .allPosts .postItems .postItem .textContent {
+        padding: 5px 10px;
+        padding-left: 85px;
+        width: 100%;
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem .textContent h4,
+    main.main .allPosts .postItems .postItem .textContent h4 {
+        font-size: 18px;
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem .textContent a p,
+    main.main .allPosts .postItems .postItem .textContent a p {
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+    .featuredItems .featuredItem a.ratings span,
+    main.main .container .featuredPost .featuredItems .featuredItem .more .view::before,
+    main.main .allPosts .postItems .postItem a.ratings span,
+    main.main .allPosts .postItems .postItem .more .view::before {
+        width: 20px;
+        height: 20px;
+    }
+
+    .shareSection .shareContainer {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header.topBar.srchMob .middle .srchBgCover {
+        display: block;
+    }
+    main.main .advancedPost {
+        flex-direction: column;
+    }
+
+    header.topBar .left button.navBtn,
+    nav.navBar .mobileMenu .mobileLogo button.navBtn {
+        margin-right: 5px;
+    }
+
+    .advacePosts {
+        gap: 28px 8px;
+        width: 100%;
+        padding: 40px 5px 5px;
+    }
+
+    main.main .advancedPost .moreAdvancePost {
+        padding: 0px 14px;
+        width: unset;
+    }
+
+    main.main .advancedPost .moreAdvancePost h3 {
+        text-align: center;
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem,
+    main.main .allPosts .postItems .postItem {
+        margin-left: 15px;
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem:nth-child(4) {
+        display: none;
+    }
+
+    header.topBar .middle {
+        position: fixed !important;
+        left: 0;
+        z-index: -3;
+        top: 0;
+        width: 100%;
+        opacity: 0;
+        pointer-events: none;
+        height: 100vh;
+    }
+
+    header.topBar.srchMob .middle {
+        z-index: 3;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    header.topBar.srchMob~nav.navBar .menuNav {
+        visibility: hidden;
+    }
+
+    header.topBar.srchMob .right .mobileSearchBtn {
+        z-index: 3;
+    }
+
+    header.topBar.srchMob .right .mobileSearchBtn button {
+        background: var(--bgColor) !important;
+    }
+
+    header.topBar.srchMob .right .mobileSearchBtn button span {
+        background: #fff;
+        width: 22px;
+        height: 22px;
+    }
+
+    header.topBar .middle .srchSecton {
+        z-index: 5;
+        position: absolute;
+        background: #fff;
+        top: -100%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 80%;
+        height: 50px;
+        padding: 0 10px;
+        border-radius: 30px;
+        transition: top .3s ease;
+    }
+
+    header.topBar.srchMob .middle .srchSecton {
+        top: 100px;
+    }
+
+    header.topBar .middle .srchSecton input[type='search'] {
+        width: 100%;
+        font-size: 19px;
+        padding: 0 3px;
+    }
+
+    header.topBar .right .mobileSearchBtn {
+        display: flex !important;
+        margin-right: 10px;
+    }
+
+    header.topBar .right .mobileSearchBtn button {
+        position: relative;
+        border-radius: 50%;
+        display: flex;
+        width: 45px;
+        height: 45px;
+        justify-content: center;
+        align-items: center;
+        transition: background .2s ease;
+        transition: z-index .3s ease .8s;
+    }
+
+    header.topBar .right .mobileSearchBtn button:hover {
+        background: var(--hover);
+    }
+
+    header.topBar .right .mobileSearchBtn button span {
+        mask-image: var(--search);
+        background: #333;
+        width: 28px;
+        height: 28px;
+    }
+
+    header.topBar .right .uploadBtn {
+        display: none;
+    }
+
+    footer.footer .footHead {
+        flex-direction: column;
+    }
+
+    footer.footer .footHead .footLinks {
+        margin: 20px 0 5px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    header.topBar {
+        height: 60px;
+    }
+
+    header.topBar .right .mobileSearchBtn {
+        margin-right: 0;
+    }
+
+    header.topBar .right .userProfile,
+    nav.navBar .menuNav .menuList .settingItem::before {
+        display: none;
+    }
+
+    header.topBar .left button.navBtn,
+    nav.navBar .mobileMenu .mobileLogo button.navBtn {
+        margin-right: 5px;
+    }
+
+    nav.navBar .menuNav .menuList {
+        padding: 0 10px;
+        gap: 3px;
+    }
+
+    nav.navBar .menuNav .menuList a {
+        width: 40px;
+        height: 40px;
+    }
+
+    nav.navBar .menuNav .menuList div>a::before {
+        width: 22px;
+        height: 22px;
+    }
+
+    nav.navBar .menuNav .menuList .settingItem,
+    nav.navBar .menuNav .menuList div .profileNav {
+        left: 0;
+    }
+
+    nav.navBar .menuNav .menuList div .profileNav.show {
+        transform: translate(-60%, -89px) scaleY(1);
+    }
+
+    nav.navBar .menuNav .menuList div .profileNav::before {
+        left: 76%;
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem,
+    main.main .allPosts .postItems .postItem {
+        height: 140px;
+        flex-basis: 250px;
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem .itemContent .imgContent,
+    main.main .allPosts .postItems .postItem .itemContent .imgContent {
+        width: 80px;
+        height: 80px;
+        transform: translate(-35%, -50%);
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem .textContent,
+    main.main .allPosts .postItems .postItem .textContent {
+        padding: 5px 7px;
+        padding-left: 60px;
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem .textContent h4,
+    main.main .allPosts .postItems .postItem .textContent h4 {
+        font-size: 16px;
+    }
+
+    main.main .container .featuredPost .featuredItems,
+    main.main .allPosts .postItems {
+        gap: 28px 22px;
+        position: relative;
+    }
+
+    main.main .container .featuredPost .featuredItems .featuredItem .textContent a p,
+    main.main .allPosts .postItems .postItem .textContent a p {
+        font-size: 14px;
+        padding-bottom: 8px;
+        text-align: justify;
+    }
+
+    .featuredItems .featuredItem a.ratings span,
+    main.main .container .featuredPost .featuredItems .featuredItem .more .view::before,
+    main.main .allPosts .postItems .postItem a.ratings span,
+    main.main .allPosts .postItems .postItem .more .view::before {
+        width: 13px;
+        height: 13px;
+    }
+
+    .postItems {
+        padding: 5px;
+    }
+
+    main.main {
+        padding: 10px 2px;
+    }
+
+    main.main .container .featuredPost,
+    main.main .allPosts {
+        padding: 5px 10px;
+    }
+
+    main.main .container .featuredPost>h4,
+    main.main .allPosts>h3 {
+        font-size: 20px;
+        padding: 10px 0 15px;
+    }
+}
